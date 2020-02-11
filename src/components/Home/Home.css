@@ -1,0 +1,28 @@
+.home-header {
+    margin: 4% 0;
+    background-image: linear-gradient(to bottom right, #191970 , #a27df5);
+}
+
+.img-header {
+    width: 90%;
+    margin: -90px 0 -10px 0;
+}
+
+#home-slogan {
+    margin: 10% 5% 10% 0;
+}
+
+.img-home {
+    width: 95%;
+    margin: -10px 0 0 -10px;
+    padding: 0;
+}
+
+.arguments {
+    margin: 8% 0;
+}
+
+.number {
+    font-weight: 700;
+    font-size: 1.8em;
+}
