@@ -26,3 +26,21 @@
     font-weight: 700;
     font-size: 1.8em;
 }
+
+.diagonal {
+    background-attachment: scroll;
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.main > div {
+    cursor: pointer;
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    left: 25%;
+  }

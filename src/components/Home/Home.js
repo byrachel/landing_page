@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import '../Home/Home.css'
 import Button from '@material-ui/core/Button';
 import { styled } from '@material-ui/styles';
+import Slider from './Slider';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -63,17 +64,18 @@ function Home() {
                 </Grid>
             </Grid>
         </Container>
-            <div className="home-header vertical-space">
-                <h2 className="white center">Et si on boostait les pouvoirs de votre site internet ?</h2>
-            </div>
-        <Container maxWidth="lg" className="arguments">
 
-            <Grid container>
-                <Grid item lg={4}>
-                   
-                </Grid>
-            </Grid>
-        </Container>
+        <div className="home-header vertical-space diagonal">
+            <h2 className="white center">Et si on boostait les pouvoirs de votre site internet ?</h2>
+        </div>
+
+
+        <Slider />
+
+
+        <div>
+            <h2 className="center">Et si on boostait les pouvoirs de votre site internet ?</h2>
+        </div>
 
     </div>
   );
