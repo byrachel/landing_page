@@ -3,20 +3,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import '../Home/Home.css'
 import Button from '@material-ui/core/Button';
-import { styled } from '@material-ui/styles';
 import Form from './Form';
-
-const MyButton = styled(Button)({
-    backgroundColor: "white",
-    fontFamily: 'Fira Sans',
-    fontSize: '1.1em',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    padding: '5px 15px',
-    color: '#191970',
-    letterSpacing: '1px',
-    marginTop: '15px'
-  });
 
 function Home() {
   return (
@@ -40,7 +27,7 @@ function Home() {
                 </Grid>
             </Container>
         </div>
-        <Container maxWidth="lg" className="arguments vertical-space">
+        <Container maxWidth="lg" className="arguments">
             <h2 className="center">Votre site est bien plus qu'une carte de visite numérique</h2>
             <p className="center purple">à condition d'avoir activé ces 6 supers pouvoirs :</p>
             <br />

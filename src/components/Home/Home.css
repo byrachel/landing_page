@@ -28,7 +28,7 @@
 }
 
 .diagonal {
-    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
 }
 
 .main > div {
