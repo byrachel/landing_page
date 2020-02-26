@@ -4,11 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import '../Home/Home.css'
 import Button from '@material-ui/core/Button';
 import { styled } from '@material-ui/styles';
-import Slider from './Slider';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import Form from './Form';
 
 const MyButton = styled(Button)({
     backgroundColor: "white",
@@ -25,7 +21,7 @@ const MyButton = styled(Button)({
 function Home() {
   return (
     <div>
-        <div className="home-header">
+        <div className="home-header vertical-space">
             <Container maxWidth="lg">
                 <Grid container>
                     <Grid item lg={6}>
@@ -35,16 +31,16 @@ function Home() {
                     <div id="home-slogan">
                             <h1 className="white">Votre site web a-t'il activé <br />
                             <span className="bolder">ses supers pouvoirs ?</span></h1>
+                            <br />
                             <div className="underline"></div>
-
-                            <p className="white">Disponible H24, il est votre meilleur ambassadeur. Il accueille et présente votre entreprise et vos valeurs à tous vos visiteurs.</p>
-                            <MyButton>évaluer mon site</MyButton>
+                            <p className="white vertical-space">Disponible H24, il est votre meilleur ambassadeur. Il accueille et présente votre entreprise et vos valeurs à tous vos visiteurs.</p>
+                            {/* <MyButton>évaluer mon site</MyButton> */}
                         </div>
                     </Grid>
                 </Grid>
             </Container>
         </div>
-        <Container maxWidth="lg" className="arguments">
+        <Container maxWidth="lg" className="arguments vertical-space">
             <h2 className="center">Votre site est bien plus qu'une carte de visite numérique</h2>
             <p className="center purple">à condition d'avoir activé ces 6 supers pouvoirs :</p>
             <br />
@@ -66,15 +62,7 @@ function Home() {
         </Container>
 
         <div className="home-header vertical-space diagonal">
-            <h2 className="white center">Et si on boostait les pouvoirs de votre site internet ?</h2>
-        </div>
-
-
-        <Slider />
-
-
-        <div>
-            <h2 className="center">Et si on boostait les pouvoirs de votre site internet ?</h2>
+            <Form />
         </div>
 
     </div>

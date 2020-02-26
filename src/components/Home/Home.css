@@ -5,7 +5,7 @@
 
 .img-header {
     width: 90%;
-    margin: -90px 0 -10px 0;
+    margin: -30px 0 -30px 0;
 }
 
 #home-slogan {
@@ -13,8 +13,8 @@
 }
 
 .img-home {
-    width: 95%;
-    margin: -10px 0 0 -10px;
+    width: 100%;
+    margin-left: -20px;
     padding: 0;
 }
 
@@ -28,7 +28,6 @@
 }
 
 .diagonal {
-    background-attachment: scroll;
     clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
 }
 
@@ -36,11 +35,37 @@
     cursor: pointer;
     position: absolute;
     width: 50%;
-    height: 500px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-weight: 800;
     left: 25%;
+    top: 25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px lightgrey;
   }
+
+.slider {
+    position: relative;
+    height: 550px;
+}
+
+input[type=text] {
+    border: none;
+    padding: 10px;
+    width: 85%;
+    font-family: 'Muli', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 1.1em;
+}
+
+.custom-select select {
+    border: none;
+    padding: 20px;
+    width: 85%;
+    font-family: 'Muli', 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 1.1em;
+}
