@@ -4,12 +4,17 @@ import Grid from '@material-ui/core/Grid';
 import '../Home/Home.css'
 import Button from '@material-ui/core/Button';
 import Form from './Form';
+import PieComponent from './PieComponent';
+import PolarComponent from './Polar';
+import DoughnutComponent from './DoughnutComponent';
+import LineComponent from './LineComponent'
+import MixComponent from './MixComponent'
 
 function Home() {
   return (
     <div>
         <div className="home-header vertical-space">
-            <Container maxWidth="lg">
+            <Container>
                 <Grid container>
                     <Grid item lg={6}>
                     <img src="/img/optimisation-de-site-internet.png" alt="Création et optimisation SEO de site internet" className="img-header"></img>
@@ -50,6 +55,15 @@ function Home() {
 
         <div className="home-header vertical-space diagonal">
             <Form />
+        </div>
+        <div>
+            <Container>
+                <PieComponent />
+                <PolarComponent />
+                <DoughnutComponent />
+                <LineComponent />
+                <MixComponent />
+            </Container>
         </div>
 
     </div>

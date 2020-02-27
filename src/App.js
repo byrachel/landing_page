@@ -34,7 +34,7 @@ function App() {
         <Container maxWidth="lg">  
           <Grid container direction="row" justify="center" alignItems="center">
               <Grid item lg={4}>
-                <p class="logo">macoma</p>
+                <p className="logo">macoma</p>
               </Grid>
               <Grid item lg={6} >
                 <nav>
