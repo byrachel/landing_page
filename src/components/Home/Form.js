@@ -25,40 +25,27 @@ export default class Form extends Component {
         super(props);
         this.state = {
             visit: '',
+            visits: ['', 0, 1, 2, 3],
             blog: '',
             web: [],
         }
     }
 
-    onChange = (e) => {
-        const name = e.target.name;
+    handleVisit = e => {
         this.setState({
             visit : e.target.value,
-            blog: e.target.value
         });
-        console.log(this.state.visit)
-        console.log(this.state.blog)
-
+        console.log(e.target.value)
     }
     
-    onSubmit = (e) => {
+    handleForm = e => {
         e.preventDefault();
+        console.log(this.state.visit + this.state.blog)
         this.setState({
             visit: 0,
             web: [...this.state.web, {visit: this.state.visit}]
         })
-        console.log(this.state.web)
-    }
-
-    displayChoice = () => {
-
-        return this.state.web.map((elt, index) => {
-            return(
-                    <div>
-                        <h4>{elt.visit}</h4>
-                    </div>
-            )
-        })
+        
     }
 
     render() {
@@ -67,14 +54,24 @@ export default class Form extends Component {
             <Container>
                 <br />
                 <h2 className="white center vertical-space">10 questions pour auditer votre stratégie :</h2>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.handleForm}>
                     <Grid container>
                         <Grid item lg={6}>
                             <p className="white bolder">1. Combien avez-vous de visiteurs par mois ? </p>
+
+                                <select value={this.state.visit} onChange={this.handleVisit}>
+                                    {
+                                        this.state.visits.map((index,visit) => {
+                                            return <option key={index} value={visit}>{visit}</option>
+                                        })
+                                    }
+                                </select>
+
+
                                 <select 
-                                    value={this.state.visit} 
+                                    // value={this.state.visit} 
                                     className="select-css" 
-                                    onChange={this.onChange} 
+                                    // onChange={this.onChange} 
                                     name="visit">
                                     <option value="0">Ne sais pas</option>
                                     <option value="1">Moins de 100 visiteurs uniques / mois</option>
@@ -83,10 +80,10 @@ export default class Form extends Component {
                                 </select>
                             <br />
                             <p className="white bolder">2. Avez-vous un blog ? </p>
-                                <select value={this.state.blog} className="select-css" onChange={this.onChange} name="blog">
+                                {/* <select value={this.state.blog} className="select-css" onChange={this.onChange} name="blog">
                                     <option value="0">Non</option>
                                     <option value="1">Oui</option>
-                                </select>
+                                </select> */}
                             <br />
                             <p className="white bolder">3. Combien d'articles publiez-vous en moyenne ? </p>
                             <div className="custom-select">
@@ -175,7 +172,6 @@ export default class Form extends Component {
                     </form>
                     <br />
                 </Container>
-                {this.displayChoice()}
             </div>
         )
     }
